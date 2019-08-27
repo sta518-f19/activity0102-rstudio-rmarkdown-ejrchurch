@@ -2,7 +2,10 @@
 title: "Activity 1-2 - RStudio and R Markdown"
 author: "Elliott J. R. Church"
 date: "8/26/2019"
-output: html_document
+output: 
+  html_document: 
+    fig_height: 15
+    fig_width: 21
 ---
 
 ### Load packages
@@ -11,7 +14,6 @@ output: html_document
 library(tidyverse) 
 library(datasauRus)
 ```
-
 
 ### Exercise 1
 
@@ -50,7 +52,7 @@ ggplot(data = star_data, mapping = aes(x = x, y = y)) +
 
 And next calculate the correlation between `x` and `y` in this dataset:
 
-```{r plot-star}
+```{r cor-star}
 star_data %>%
   summarize(r = cor(x, y))
 ```
@@ -69,7 +71,7 @@ ggplot(data = circle_data, mapping = aes(x = x, y = y)) +
 
 And next calculate the correlation between `x` and `y` in this dataset:
 
-```{r plot-circle}
+```{r cor-circle}
 circle_data %>%
   summarize(r = cor(x, y))
 ```
@@ -87,7 +89,7 @@ ggplot(data = datasaurus_dozen, aes(x = x, y = y, color = dataset)) +
 
 Now we will use the group_by function to generate all the summary correlation coefficients:
 
-```{r plot-facets}
+```{r cor-facets}
 datasaurus_dozen %>%
   group_by(dataset) %>%
   summarize(r = cor(x, y)) %>%

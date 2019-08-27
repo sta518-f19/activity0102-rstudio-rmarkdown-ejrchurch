@@ -1,5 +1,5 @@
 ---
-title: "Activity 1.2 - RStudio and R Markdown"
+title: "Activity 1-2 - RStudio and R Markdown"
 author: "Elliott J. R. Church"
 date: "8/26/2019"
 output: html_document

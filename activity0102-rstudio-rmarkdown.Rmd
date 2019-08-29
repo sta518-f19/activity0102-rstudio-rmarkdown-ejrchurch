@@ -6,6 +6,8 @@ output:
   html_document: 
     fig_height: 15
     fig_width: 21
+    highlight: tango
+    theme: cosmo
 ---
 
 ### Load packages
